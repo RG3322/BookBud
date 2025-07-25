@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.google.ksp) apply false
 
 
+    id("com.google.dagger.hilt.android") version "2.57" apply false
 
 
 }

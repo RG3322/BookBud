@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.google.ksp)
+    id("com.google.dagger.hilt.android")
 
 }
 
@@ -58,27 +59,29 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation("androidx.compose.material:material-icons-extended:1.6.8")
+    implementation("androidx.compose.material:material-icons-extended:1.7.8")
 
-     implementation("com.google.dagger:hilt-android:2.50")
+     implementation("com.google.dagger:hilt-android:2.57")
 
      implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation("com.google.dagger:hilt-android:2.57")
+    ksp("com.google.dagger:hilt-android-compiler:2.57")
 
 
 
-     implementation("androidx.navigation:navigation-compose:2.8.0-beta02")
+     implementation("androidx.navigation:navigation-compose:2.9.2")
 
 
-         implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+         implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
 
-    implementation("io.coil-kt:coil-compose:2.6.0")
-    ksp("io.coil-kt:coil-compose:2.6.0")
-    implementation("androidx.room:room-runtime:2.6.0-alpha01")
-    ksp("androidx.room:room-compiler:2.6.0-alpha01")
+    implementation("io.coil-kt:coil-compose:2.7.0")
+    ksp("io.coil-kt:coil-compose:2.7.0")
+    implementation("androidx.room:room-runtime:2.7.2")
+    ksp("androidx.room:room-compiler:2.7.2")
 
 
 
-    implementation ("io.github.grizzi91:bouquet:1.1.2")
+    implementation ("io.github.grizzi91:bouquet:1.1.3")
 
 
 }
