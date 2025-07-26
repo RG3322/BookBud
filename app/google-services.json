@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "632974776488",
+    "project_id": "bookbuddy-d466d",
+    "storage_bucket": "bookbuddy-d466d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632974776488:android:28d001c70e77f7bdfd0a9d",
+        "android_client_info": {
+          "package_name": "com.fire.bookbuddy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN-AZS5nTAM20VzCfC0hcXMbfoSoEe18U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

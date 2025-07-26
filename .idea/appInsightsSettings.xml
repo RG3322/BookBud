@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.fire.bookbuddy" />
+                  <option name="mobileSdkAppId" value="1:632974776488:android:28d001c70e77f7bdfd0a9d" />
+                  <option name="projectId" value="bookbuddy-d466d" />
+                  <option name="projectNumber" value="632974776488" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

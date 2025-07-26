@@ -7,6 +7,7 @@ plugins {
 
 
     id("com.google.dagger.hilt.android") version "2.57" apply false
+    alias(libs.plugins.google.gms.google.services) apply false
 
 
 }
