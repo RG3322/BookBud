@@ -9,3 +9,6 @@ data class BookModel(
     val bookCategory : String = "",
     val image : String = ""
 )
+
+
+//Database part needs to be studied again, with proper documentation. 30:00 onwards upto 47:00
