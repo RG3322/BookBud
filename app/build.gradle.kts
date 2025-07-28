@@ -6,6 +6,7 @@ plugins {
     id("com.google.dagger.hilt.android")
     alias(libs.plugins.google.gms.google.services)
 
+
 }
 
 android {
@@ -80,6 +81,7 @@ dependencies {
     ksp("io.coil-kt:coil-compose:2.7.0")
     implementation("androidx.room:room-runtime:2.7.2")
     ksp("androidx.room:room-compiler:2.7.2")
+    implementation("com.google.firebase:firebase-database:22.0.0")
 
 
 
