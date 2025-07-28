@@ -38,13 +38,44 @@ class AllBookRepoImpl @Inject constructor(val firebaseDatabase: FirebaseDatabase
     }
 
 
-    override fun getAllCategory(): Flow<ResultState<List<BookCategoryModel>>> {
-        TODO("Not yet implemented")
+    override fun getAllCategory(): Flow<ResultState<List<BookCategoryModel>>> = callbackFlow {
+        trySend(ResultState.Loading)
+        val valueEvent = object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val items = snapshot.children.mapNotNull {
+                    it.getValue(BookCategoryModel::class.java)
+                }
+                trySend(ResultState.Success(items))
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                trySend(ResultState.Error(error.toException()))
+            }
+        }
+        firebaseDatabase.reference.child("Category").addValueEventListener(valueEvent)
+        awaitClose {
+            firebaseDatabase.reference.removeEventListener(valueEvent)
+        }
     }
 
-    override fun getAllBooksByCategory(): Flow<ResultState<List<BookModel>>> {
-        TODO("Not yet implemented")
-    }
+    override fun getAllBooksByCategory(): Flow<ResultState<List<BookModel>>> = callbackFlow{
+        trySend(ResultState.Loading)
+        val valueEvent = object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val items = snapshot.children.mapNotNull {
+                    it.getValue(BookModel::class.java)
+                }
+                trySend(ResultState.Success(items))
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                trySend(ResultState.Error(error.toException()))
+            }
+        }
+        firebaseDatabase.reference.child("Books").addValueEventListener(valueEvent)
+        awaitClose{
+            firebaseDatabase.reference.removeEventListener(valueEvent)
+        }    }
 
     override fun onCancelled(error: DatabaseError) {
         TODO("Not yet implemented")
