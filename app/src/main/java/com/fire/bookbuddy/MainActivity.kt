@@ -29,5 +29,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+//files in this project are only created to avoid conflict with firebase. and package error
+
 
 
