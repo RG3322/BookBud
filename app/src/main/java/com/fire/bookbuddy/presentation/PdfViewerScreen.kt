@@ -17,7 +17,5 @@ fun  PdfViewerScreen(
     var isDarkMode by remember { mutableStateOf(false) }
     val pdfState = rememberVerticalPdfReaderState(resource = ResourceType.Remote(url), isZoomEnable = true)
     com.rizzi.bouquet.VerticalPdfReader(state = pdfState, isDarkMode = isDarkMode)
-    //vghsdvhfidfafna buivodvnrnvkahihvdbv
-    // just want ti change the filel
 
 }
