@@ -86,6 +86,10 @@ dependencies {
 
 
     implementation ("io.github.grizzi91:bouquet:1.1.3")
+    implementation ("io.github.grizzi91:bouquet-compose:1.1.3")
+
+        implementation("io.github.grizzi91:bouquet:1.1.2")
+
 
 
 }
