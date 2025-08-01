@@ -1,3 +1,13 @@
+
+/**Need too work on this file again
+ * possible errors might arise from this
+ * time stamp  2:47:00 - 2:56:00 onwards **/
+
+
+
+
+
+
 package com.fire.bookbuddy.presentation.Effects
 
 import androidx.compose.animation.core.FastOutSlowInEasing
@@ -58,14 +68,14 @@ fun AnimateShimmer() {
 
 @Composable
 fun ShimmerGridItem(brush: Brush) {
-    Column(
+    Card(
         modifier = Modifier
             .height(150.dp)
-            .padding(all = 10.dp),
-        verticalArrangement = Arrangement.Center,
+            .padding(all = 10.dp)
     ) {
         Spacer(
             modifier = Modifier
+                .align(Alignment.CenterHorizontally)
                 .size(100.dp)
                 .clip(RoundedCornerShape(8.dp))
                 .background(brush)
@@ -124,4 +134,41 @@ fun categoryShimmer(){
         start = androidx.compose.ui.geometry.Offset(10f, 10f),
         end = androidx.compose.ui.geometry.Offset(translateAnim.value, translateAnim.value)
     )
+    Card(
+        modifier = Modifier
+            .height(150.dp)
+            .padding(all = 10.dp)
+    ) {
+        Spacer(
+            modifier = Modifier
+                .align(Alignment.CenterHorizontally)
+                .size(100.dp)
+                .clip(RoundedCornerShape(8.dp))
+                .background(brush)
+        )
+        Spacer(modifier = Modifier.padding(10.dp))
+
+        Column(
+            verticalArrangement = Arrangement.Center
+        ) {
+            Spacer(modifier = Modifier.padding(5.dp))
+
+            Spacer(
+                modifier = Modifier
+                    .size(16.dp)
+                    .clip(RoundedCornerShape(8.dp))
+                    .fillMaxWidth(fraction = 0.9f)
+                    .background(brush)
+            )
+            Spacer(modifier = Modifier.padding(5.dp))
+
+            Spacer(
+                modifier = Modifier
+                    .size(16.dp)
+                    .clip(RoundedCornerShape(8.dp))
+                    .fillMaxWidth(fraction = 0.9f)
+                    .background(brush)
+            )
+        }
+    }
 }
