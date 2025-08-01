@@ -1,4 +1,8 @@
 package com.fire.bookbuddy.presentation.AllBooksByCategory
 
-class BookByCategory {
+import androidx.compose.runtime.Composable
+
+
+@Composable
+fun  BooksByCategory() {
 }
