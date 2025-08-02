@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import coil.compose.SubcomposeAsyncImage
+import com.fire.bookbuddy.presentation.navigation.Routes
 
 // do it later, time stamp 2:16:00
 @Composable
@@ -32,7 +33,7 @@ fun BookCategoryCart(
 
     Card(
         onClick = {
-            navController.navigate("book_category")
+            navController.navigate(Routes.BooksByCategory(category))
         },
         modifier = Modifier.padding(8.dp)
             .fillMaxWidth()

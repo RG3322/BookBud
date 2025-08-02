@@ -24,7 +24,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import androidx.navigation.NavDestination.Companion.createRoute
 import coil.compose.SubcomposeAsyncImage
+import com.fire.bookbuddy.presentation.navigation.Routes
 import java.net.URL
 
 @Composable
@@ -41,7 +43,7 @@ fun Bookcart(
         modifier = Modifier.padding(8.dp)
             .fillMaxWidth()
             .clickable(){
-                navController.navigate("book_details")
+                navController.navigate(Routes.ShowPdfScreen(url = bookUrl))
                 }
 
     ){

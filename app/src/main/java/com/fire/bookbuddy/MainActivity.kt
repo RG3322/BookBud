@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.fire.bookbuddy.presentation.navigation.NavGraph
 import com.fire.bookbuddy.ui.theme.BookBuddyTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,12 +26,17 @@ class MainActivity : ComponentActivity() {
         setContent {
             BookBuddyTheme {
 
+                val navController = rememberNavController()
+                NavGraph(navController = navController)
+
+
+
             }
         }
     }
 }
 
-//files in this project are only created to avoid conflict with firebase. and package error
+//packages in this project are only created to avoid conflict with firebase. and package error
 
 
 
