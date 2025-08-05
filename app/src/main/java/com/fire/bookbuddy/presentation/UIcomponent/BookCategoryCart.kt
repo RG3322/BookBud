@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
@@ -21,7 +20,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import coil.compose.SubcomposeAsyncImage
+
 import com.fire.bookbuddy.presentation.navigation.Routes
+import com.fire.bookbuddy.presentation.navigation.Routes.BooksByCategory
+import com.google.android.libraries.mapsplatform.transportation.consumer.model.Route
+import okhttp3.Route
+
 
 // do it later, time stamp 2:16:00
 @Composable
@@ -33,7 +37,7 @@ fun BookCategoryCart(
 
     Card(
         onClick = {
-            navController.navigate(Routes.BooksByCategory(category))
+            navController.navigate(Route.BooksByCategory)   // navigate to booksbycategory
         },
         modifier = Modifier.padding(8.dp)
             .fillMaxWidth()

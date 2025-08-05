@@ -36,8 +36,10 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import com.fire.bookbuddy.R
 import com.fire.bookbuddy.presentation.TabScreen.TabScreen
 import kotlinx.coroutines.launch
 
@@ -100,7 +102,7 @@ fun HomeScreen (navHostController: NavHostController) {
                         selected = false,
                         icon = {
                             Icon(
-                                imageVector = androidx.compose.material.icons.Icons.Filled.Info,
+                                painter = painterResource(id =R.drawable.github),
                                 contentDescription = "Github",
                                 modifier = Modifier.size(24.dp)
                             )
@@ -130,13 +132,13 @@ fun HomeScreen (navHostController: NavHostController) {
                         selected = false,
                         icon = {
                             Icon(
-                                imageVector = androidx.compose.material.icons.Icons.Filled.Info,
+                                painter = painterResource(id=R.drawable.bug),
                                 contentDescription = "Bugs ",
                                 modifier = Modifier.size(24.dp)
                             )
                         },
                         onClick = {
-                            urlHandler.openUri("//github link//")
+                            urlHandler.openUri("https://github.com/RG3322")
                         })
 
 

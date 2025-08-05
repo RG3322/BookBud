@@ -5,7 +5,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
-import com.fire.bookbuddy.presentation.AllBooksByCategory.BooksByCategory
 import com.fire.bookbuddy.presentation.HomeScreen.HomeScreen
 import com.fire.bookbuddy.presentation.PdfViewerScreen
 
