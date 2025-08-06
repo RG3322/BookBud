@@ -24,7 +24,6 @@ import coil.compose.SubcomposeAsyncImage
 import com.fire.bookbuddy.presentation.navigation.Routes
 import com.fire.bookbuddy.presentation.navigation.Routes.BooksByCategory
 import com.google.android.libraries.mapsplatform.transportation.consumer.model.Route
-import okhttp3.Route
 
 
 // do it later, time stamp 2:16:00
@@ -37,7 +36,7 @@ fun BookCategoryCart(
 
     Card(
         onClick = {
-            navController.navigate(Route.BooksByCategory)   // navigate to booksbycategory
+            navController.navigate(route = BooksByCategory)   // navigate to booksbycategory
         },
         modifier = Modifier.padding(8.dp)
             .fillMaxWidth()
@@ -70,6 +69,7 @@ fun BookCategoryCart(
                 fontWeight = FontWeight.Bold,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis)
+
 
         }
     }
