@@ -1,5 +1,6 @@
 package com.fire.bookbuddy.presentation.TabScreen
 
+import android.R.id.tabs
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -51,11 +52,11 @@ fun TabScreen(navHostController: NavHostController) {
                    text = {
                        Row (verticalAlignment = Alignment.CenterVertically){
                            Icon(
-                               imageVector = tab.icon, contentDescription = tab.title
-                               , modifier = Modifier.size(24.dp)
+                               imageVector = tabItem.icon, contentDescription = tabItem.title
+                               , modifier = Modifier.size(24.dp())
                            )
-                           Spacer(modifier = Modifier.size(8.dp))
-                           Text(tab.title)
+                           Spacer(modifier = Modifier.size(8.dp()))
+                           Text(tabItem.title)
                        }
                    }
                )

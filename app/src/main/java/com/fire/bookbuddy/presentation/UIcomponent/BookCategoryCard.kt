@@ -21,14 +21,12 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import coil.compose.SubcomposeAsyncImage
 
-import com.fire.bookbuddy.presentation.navigation.Routes
 import com.fire.bookbuddy.presentation.navigation.Routes.BooksByCategory
-import com.google.android.libraries.mapsplatform.transportation.consumer.model.Route
 
 
 // do it later, time stamp 2:16:00
 @Composable
-fun BookCategoryCart(
+fun BookCategoryCard(
     category: String,
     navController: NavController,
     imageURl: String,
