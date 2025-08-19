@@ -3,7 +3,6 @@ package com.fire.bookbuddy.presentation.viewModel
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.viewModelScope
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.fire.bookbuddy.common.BookCategoryModel
 import com.fire.bookbuddy.common.BookModel
 import com.fire.bookbuddy.common.ResultState
@@ -38,7 +37,7 @@ class ViewModel @Inject constructor(private val repo: AllBookRepo) : androidx.li
         }
     }
 
-    fun BringAllCategory(){
+    fun BringAllCategory(category: String) {
 
         viewModelScope.launch {
             repo.getAllCategory().collect{

@@ -23,7 +23,7 @@ fun CategoryScreen(
 
     LaunchedEffect(Unit) {
 
-        viewmodel.BringAllCategory()
+        viewmodel.BringAllCategory(category)
 
 
     }
