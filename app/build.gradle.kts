@@ -3,8 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     id("com.google.dagger.hilt.android")
-    alias(libs.plugins.google.gms.google.services)
     id("com.google.devtools.ksp") // Make sure this is present
+    id("com.google.gms.google-services")
 }
 
 android {
