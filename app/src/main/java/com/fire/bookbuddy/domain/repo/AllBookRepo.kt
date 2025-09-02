@@ -7,6 +7,12 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseException
 import kotlinx.coroutines.flow.Flow
 
+/**
+ * Repository interface for accessing book-related data.
+ *
+ * This interface defines the contract for retrieving information about books,
+ * book categories, and handling potential database errors.
+ */
 interface AllBookRepo {
 
     fun getAllBooks(): Flow<ResultState<List<BookModel>>>
@@ -17,3 +23,9 @@ interface AllBookRepo {
     fun onCancelled(error: DatabaseError)
     fun trySend(error: com.fire.bookbuddy.common.ResultState.Error<com.google.firebase.database.DatabaseException>)
 }
+/*
+Why I created this interface?
+
+This
+
+ */
