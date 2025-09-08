@@ -52,7 +52,7 @@ class AllBookRepoImpl @Inject constructor(val firebaseDatabase: FirebaseDatabase
                 trySend(ResultState.Error(error.toException()))
             }
         }
-        firebaseDatabase.reference.child("Category").addValueEventListener(valueEvent)
+        firebaseDatabase.reference.child("BooksCategory").addValueEventListener(valueEvent)
         awaitClose {
             firebaseDatabase.reference.removeEventListener(valueEvent)
         }
@@ -78,11 +78,16 @@ class AllBookRepoImpl @Inject constructor(val firebaseDatabase: FirebaseDatabase
         }    }
 
     override fun onCancelled(error: DatabaseError) {
-        TODO("Not yet implemented")
+        trySend(ResultState.Error(error.toException()))
+
+        firebaseDatabase.reference.child("Books")
+
     }
+
 
     override fun trySend(error: ResultState.Error<DatabaseException>) {
         TODO("Not yet implemented")
     }
+
 }
 
