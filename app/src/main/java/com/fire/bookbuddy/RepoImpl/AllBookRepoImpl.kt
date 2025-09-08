@@ -14,6 +14,11 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import javax.inject.Inject
 
+/**
+ * Implementation of [AllBookRepo] that interacts with Firebase Realtime Database.
+ *
+ * @property firebaseDatabase Instance of [FirebaseDatabase] for accessing the database.
+ */
 class AllBookRepoImpl @Inject constructor(val firebaseDatabase: FirebaseDatabase) : AllBookRepo {
     override fun getAllBooks(): Flow<ResultState<List<BookModel>>> = callbackFlow {
         trySend(ResultState.Loading)
