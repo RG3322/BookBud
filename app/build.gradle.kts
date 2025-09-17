@@ -1,5 +1,8 @@
+import org.gradle.kotlin.dsl.implementation
+
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
 
     alias(libs.plugins.kotlin.compose)
     id("com.google.dagger.hilt.android")
@@ -63,20 +66,26 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation("androidx.compose.material:material-icons-extended:1.7.8")
+    implementation("androidx.compose.material:material-icons-extended:1.8.0")
 
      implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
-    implementation("com.google.dagger:hilt-android:2.57")
-    ksp("com.google.dagger:hilt-android-compiler:2.57")
-     implementation("androidx.navigation:navigation-compose:2.9.2")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    ksp("com.google.dagger:hilt-android-compiler:2.51.1")
+     implementation("androidx.navigation:navigation-compose:2.7.7")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 
     implementation(libs.coil.kt.coil.compose)
     ksp(libs.coil.kt.coil.compose)
-    implementation("androidx.room:room-runtime:2.7.2")
-    ksp("androidx.room:room-compiler:2.7.2")
+    implementation("androidx.room:room-runtime:2.8.0")
+    ksp("androidx.room:room-compiler:2.8.0")
     implementation("com.google.firebase:firebase-database:22.0.0")
 
-    implementation ("io.github.grizzi91:bouquet:1.1.3")
-    implementation ("io.github.grizzi91:bouquet-compose:1.1.3")
+    implementation ("io.github.grizzi91:bouquet:1.2.0")
+    implementation ("io.github.grizzi91:bouquet-compose:1.2.0")
+
+    implementation("io.insert-koin:koin-bom:4.1.1")
+
+    implementation ("io.insert-koin:koin-android")
+    implementation ("io.insert-koin:koin-annotations")
+    ksp ("io.insert-koin:koin-ksp-compiler")
 }
